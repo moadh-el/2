@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>AI4GOOD - Perplexity Vision PC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="header">
+    <div class="title-block">
+      <h1><span class="pill">🔥 Perplexity AI Pro</span></h1>
+      <p class="subtitle">Reconnaissance PIÈCES PC - 📸 Prends photo → IA analyse !</p>
+    </div>
+    <div class="badges">
+      <div class="badge"><strong>Perplexity API</strong></div>
+      <div class="badge">Pièces PC auto</div>
+      <div class="badge">Nuit de l'Info</div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <!-- CAMERA + BOUTONS -->
+    <section class="camera-section">
+      <h2><span class="icon">📱</span> Caméra Pièce PC</h2>
+      
+      <div class="camera-container">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+        <img id="photo" class="photo-preview" style="display:none;">
+        <div class="camera-overlay">
+          <div class="target-square"></div>
+        </div>
+      </div>
+      
+      <div class="camera-controls">
+        <button id="startCamera" class="primary large">🎥 Démarrer Caméra</button>
+        <button id="captureBtn" class="primary large capture" disabled>📸 Prendre Photo</button>
+        <label for="fileInput" class="file-btn primary">📁 Upload Photo</label>
+        <input type="file" id="fileInput" accept="image/*" style="display:none;">
+      </div>
+    </section>
+
+    <!-- ANALYSE IA -->
+    <section class="results-section">
+      <h2><span class="icon">🤖</span> Analyse Perplexity</h2>
+      <div class="ai-response" id="aiResponse">
+        <div class="placeholder">
+          <span class="icon-large">📸</span>
+          <p>1️⃣ Démarre caméra<br>2️⃣ 📸 Prends photo<br>3️⃣ IA analyse !</p>
+        </div>
+      </div>
+      <button id="analyzeBtn" class="primary full-width" disabled>🚀 ANALYSER IA</button>
+    </section>
+  </div>
+
+  <div class="api-status">
+    <span class="status-dot" id="statusDot"></span>
+    <span id="statusText">Chargement Perplexity...</span>
+  </div>
+
+  <p class="footer-note">
+    AI4GOOD Nuit de l'Info • <a href="https://www.perplexity.ai/settings/api">Clé Perplexity</a>
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
