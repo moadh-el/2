@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC BUILDER BOT 📸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1><span class="pill crazy">PC BUILDER BOT</span></h1>
+            <p class="subtitle">Analyse tes composants + Rires nucléaires ! 📸⚡</p>
+        </header>
+
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot explosion">
+                    <div class="avatar">🤖</div>
+                    <div class="content">
+                        <span class="rainbow">🚀 BIENVENUE PC BUILDER !</span><br>
+                        📷 Prends une photo ou tape un mot !
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="input-crazy">
+            <input type="text" id="userInput" placeholder="Tape 'banane' ou 'pizza'...">
+            <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+            <label for="photoUpload" class="photo-btn">PHOTO</label>
+            <button id="cameraBtn" class="camera-btn">🎥 CAMERA</button>
+            <button id="sendBtn">ENVOYER</button>
+        </div>
+
+        <div class="quick-madness">
+            <h3>MOTS FOLIES</h3>
+            <div class="quick-buttons">
+                <button class="quick-btn" data-trigger="GPU">GPU</button>
+                <button class="quick-btn" data-trigger="CPU">CPU</button>
+                <button class="quick-btn" data-trigger="LINUX">LINUX</button>
+                <button class="quick-btn nuke" data-trigger="ROM">ROM</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAMERA MODALE -->
+    <div id="cameraModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video id="cameraVideo" autoplay></video>
+            <canvas id="cameraCanvas" style="display:none;"></canvas>
+            <div class="camera-controls">
+                <button id="captureBtn">📷 PHOTO</button>
+                <button id="switchCamera">🔄 Cam</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
